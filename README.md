@@ -1,35 +1,25 @@
-# whatsmeow
-[![Go Reference](https://pkg.go.dev/badge/go.mau.fi/whatsmeow.svg)](https://pkg.go.dev/go.mau.fi/whatsmeow)
+whatsGo
+whatsgo é uma biblioteca em Go para a API web multidevices do WhatsApp.
 
-whatsmeow is a Go library for the WhatsApp web multidevice API.
+Discussão
+Para dúvidas sobre o protocolo do WhatsApp (como enviar um tipo específico de mensagem), você também pode usar a seção Perguntas e Respostas do protocolo WhatsApp nas discussões do GitHub.
 
-## Discussion
-Matrix room: [#whatsmeow:maunium.net](https://matrix.to/#/#whatsmeow:maunium.net)
+Uso
+A documentação no godoc inclui detalhes sobre todos os métodos e tipos de eventos.
+Também há um exemplo simples no topo da página.
 
-For questions about the WhatsApp protocol (like how to send a specific type of
-message), you can also use the [WhatsApp protocol Q&A] section on GitHub
-discussions.
+Funcionalidades
+A maioria das funcionalidades principais já está presente:
+	*Enviar mensagens para chats privados e grupos (tanto texto quanto mídia)
+	*Receber todas as mensagens
+	*Gerenciar grupos e receber eventos de alterações nos grupos
+	*Entrar via mensagens de convite, usar e criar links de convite
+	*Enviar e receber notificações de digitação
+	*Enviar e receber recibos de entrega e leitura
+	*Ler e escrever o estado do aplicativo (lista de contatos, status de fixar/silenciar chats, etc.)
+	*Enviar e lidar com recibos de tentativa novamente quando a descriptografia falha
+	*Enviar mensagens de status (experimental, pode não funcionar em listas de contatos grandes)
 
-[WhatsApp protocol Q&A]: https://github.com/tulir/whatsmeow/discussions/categories/whatsapp-protocol-q-a
-
-## Usage
-The [godoc](https://pkg.go.dev/go.mau.fi/whatsmeow) includes docs for all methods and event types.
-There's also a [simple example](https://pkg.go.dev/go.mau.fi/whatsmeow#example-package) at the top.
-
-## Features
-Most core features are already present:
-
-* Sending messages to private chats and groups (both text and media)
-* Receiving all messages
-* Managing groups and receiving group change events
-* Joining via invite messages, using and creating invite links
-* Sending and receiving typing notifications
-* Sending and receiving delivery and read receipts
-* Reading and writing app state (contact list, chat pin/mute status, etc)
-* Sending and handling retry receipts if message decryption fails
-* Sending status messages (experimental, may not work for large contact lists)
-
-Things that are not yet implemented:
-
-* Sending broadcast list messages (this is not supported on WhatsApp web either)
-* Calls
+Funcionalidades que ainda não estão implementadas:
+	*Enviar mensagens para listas de transmissão (também não é suportado no WhatsApp Web)
+	*Chamadas
